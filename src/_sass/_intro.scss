@@ -21,7 +21,8 @@
     margin-bottom: 48px;
 
     .spinner {
-      $spinner-line-height: 46px;
+      line-height: 44px;
+      $spinner-line-height: 44px;
       height: #{$spinner-line-height - 6px};
       overflow-y: hidden;
       font-weight: 700;
