@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "The second iteration of my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khan Soh <ksoh@tuta.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2"
+  }
+}

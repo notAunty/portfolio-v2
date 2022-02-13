@@ -1,0 +1,87 @@
+// Vars
+$nav-bar-height: 72px;
+
+// Colors
+$primary: #fa8072;
+$primary2: #fac472;
+$accent: #72ecfa; // #ffcc66;
+$secondary: #339972;
+$secondary2: #40bf8e;
+$darker-night: #131720;
+$night: #171c28;
+$black: #36363c;
+$dark-grey: #444452;
+$light-dark-grey: #54545f;
+$white: #fdfdfd;
+$lil-off-white: #f9f9f9;
+$off-white: #e7e7e7;
+$old-slate: #afafbf;
+$slate: #b9b9c6;
+$grey: #777777;
+$blue: #007bff;
+$green: #bae67e;
+$purple: #7d0ce8;
+$red: #ff0000;
+$orange: #e8850c;
+$yellow: #ffdc00;
+
+// Theme colors
+$bg-color: $white;
+$bg-color2: $off-white;
+$text-color: $dark-grey;
+$text-color2: $grey;
+$primary-color: $primary;
+
+[data-theme="dark"] {
+  $bg-color: $dark-grey;
+  $bg-color2: $light-dark-grey;
+  $text-color: $off-white;
+  $text-color2: $slate;
+  $primary-color: $primary2;
+}
+
+// Media queries
+$desktop-width: 1440px;
+$small-desktop-width: 1080px;
+$tablet-width: 768px;
+$mobile-width: 480px;
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (max-width: #{$small-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin ultrawide {
+  @media screen and (max-width: #{$mobile-width}) and (max-aspect-ratio: 7/18) {
+    @content;
+  }
+}
+
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ("-webkit-", "-moz-", "-ms-", "-o-", "") {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
