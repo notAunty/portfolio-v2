@@ -23,20 +23,34 @@
     background-color: $bg-color2;
 
     // display: none;
-    animation: splash-close 0.3s forwards 999s;
+    animation: splash-close 0.7s forwards 4.7s;
 
     @keyframes splash-close {
       0% {
         transform: translateY(0%);
+      }
+      60% {
+        transform: translateY(10%);
       }
       99% {
         display: block;
       }
       100% {
         display: none;
-        transform: translateY(100%);
+        transform: translateY(-100%);
       }
     }
+  }
+
+  .splash__overlay-text {
+    position: absolute;
+    font-family: "Acme", system-ui, sans-serif;
+    font-size: 100px;
+    color: white;
+    margin-right: 4px;
+    font-weight: 700;
+    opacity: 0;
+    animation: initials-fly-in 0.7s forwards 3.5s;
   }
 
   .splash__cover {
@@ -64,6 +78,18 @@
   @keyframes cover-shrink {
     100% {
       transform: scale(0);
+    }
+  }
+
+  @keyframes initials-fly-in {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }

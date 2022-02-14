@@ -13,17 +13,17 @@
     padding: 0 48px;
   }
 
-  // opacity: 0;
-  // animation: site-fly-in 1s forwards cubic-bezier(0.19, 1, 0.22, 1);
-  // @keyframes site-fly-in {
-  //   0% {
-  //     transform-origin: top left;
-  //     transform: rotate(5deg);
-  //   }
-  //   100% {
-  //     opacity: 1;
-  //     display: block;
-  //     transform: none;
-  //   }
-  // }
+  opacity: 0;
+  animation: site-fly-in 1s forwards 5.4s cubic-bezier(0.19, 1, 0.22, 1);
+  @keyframes site-fly-in {
+    0% {
+      transform-origin: top left;
+      transform: rotate(5deg);
+    }
+    100% {
+      opacity: 1;
+      display: block;
+      transform: none;
+    }
+  }
 }
