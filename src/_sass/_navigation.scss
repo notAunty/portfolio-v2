@@ -14,11 +14,45 @@ nav {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   background-color: rgba($white, 0.72);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 
+  // Logo
+  .nav__logo {
+    height: calc(100% - 16px);
+  }
+
+  // Menu
+  .nav__menu {
+    > ul {
+      display: flex;
+      list-style: none;
+
+      > li {
+        font-weight: 500;
+        margin-right: 24px;
+
+        > a {
+          color: $text-color2;
+          transition: color 0.2s ease-in-out;
+        }
+
+        > a.current {
+          color: $text-color;
+        }
+
+        > a:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+
+  // Skip to content
   .skip-to-content-link {
     background: $primary-color;
     left: 168px;
@@ -27,7 +61,6 @@ nav {
     transform: translateY(-150%);
     transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   }
-
   .skip-to-content-link:focus {
     border: none;
     transform: translateY(0%);

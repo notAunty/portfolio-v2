@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Acme';
+  src: url('../fonts/Acme-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.site-logo {
+  position: relative;
+  height: 100%;
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  > span {
+    position: absolute;
+    color: $white;
+    margin-right: 1px;
+    margin-top: 4px;
+    font-family: 'Acme', system-ui, sans-serif;
+    font-size: 120%;
+    font-weight: 700;
+  }
+}
