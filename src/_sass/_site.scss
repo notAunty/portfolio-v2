@@ -1,6 +1,5 @@
 #site-wrapper {
   height: 100%;
-  isolation: isolate;
 }
 
 #site {
@@ -9,6 +8,7 @@
   width: 100%;
   max-width: 1400px;
   padding: 0 80px 80px;
+  isolation: isolate;
 
   @include tablet {
     padding: 0 48px;

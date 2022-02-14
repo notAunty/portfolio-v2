@@ -1,5 +1,6 @@
 import darkTheme from "./dark-theme";
 import portfolioSplash from "./portfolio-splash";
+import scrollReveal from "./scroll-reveal";
 
 // Alternative to: document.addEventListener("DOMContentLoaded", function(event) {});
 $("document").ready(main);
@@ -10,6 +11,7 @@ function main() {
   
   // darkTheme();
   portfolioSplash();
+  scrollReveal();
 
   // GO TO TOP BUTTON
   const goTopButton = document.getElementById("go-top-btn");

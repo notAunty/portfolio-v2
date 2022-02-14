@@ -1,5 +1,6 @@
 #portfolio-splash {
-  $pull-height: 32px;
+  z-index: 20;
+  $pull-height: 56px;
   position: absolute;
   top: #{-$pull-height};
   left: 0;
