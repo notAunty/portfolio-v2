@@ -39,85 +39,16 @@
     }
   }
 
-  #blobSvg::before,
-  #blobSvg::after {
-    content: "";
-    width: 50%;
-    height: 100%;
-    border-radius: 0.5em 0 0 0.5em;
-    position: absolute;
-    left: 0;
-    transform-origin: center right;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  path {
+    stroke-dasharray: 1127;
+    stroke-dashoffset: 1127;
+    animation: line-draw 1.5s forwards cubic-bezier(0.55, 0.085, 0.68, 0.53);
   }
 
-  #blobSvg::before {
-    z-index: 1;
-    background-color: $bg-color2;
-    animation-name: mask;
-    animation-timing-function: steps(1);
-  }
-
-  #blobSvg::after {
-    background-color: var(--color);
-    animation-name: rotate;
-    animation-timing-function: linear;
-  }
-
-  @keyframes mask {
-    50% {
-      opacity: 0;
+  @keyframes line-draw {
+    to { 
+      stroke-dashoffset: 0;
     }
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0.5turn);
-    }
-    100% {
-      transform: rotate(1.5turn);
-    }
-  }
-
-  .pie {
-    width: 128px;
-    aspect-ratio: 1;
-    font-size: 500%;
-    position: relative;
-    border-radius: 50%;
-    margin: 0.5em;
-    display: inline-block;
-    --color: white;
-
-    > * {
-      position: absolute;
-    }
-  }
-
-  .pie::before,
-  .pie::after {
-    content: "";
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    border-radius: 0.5em 0 0 0.5em;
-    transform-origin: center right;
-    animation-iteration-count: infinite;
-    animation-duration: 3s;
-  }
-
-  .pie::before {
-    z-index: 1;
-    background-color: blue;
-    animation-name: mask;
-    animation-timing-function: steps(1);
-  }
-
-  .pie::after {
-    background-color: red;
-    animation-name: rotate;
-    animation-timing-function: linear;
+    
   }
 }
