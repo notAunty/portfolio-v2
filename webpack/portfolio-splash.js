@@ -1,8 +1,7 @@
-import config from "./config";
 export default () => {
-  // setTimeout(() => {
-  //   $("#portfolio-splash").css("display", "none");
-  // }, config.production ? 2000 : 200000);
+  setTimeout(() => {
+    $("#site").css("display", "block");
+  }, 4400);
 
   // console.log($(".blob")[0].getTotalLength());
-}
+};

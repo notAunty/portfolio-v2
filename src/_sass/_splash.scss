@@ -1,15 +1,35 @@
 #portfolio-splash {
+  $pull-height: 32px;
   position: absolute;
-  top: 0;
+  top: #{-$pull-height};
   left: 0;
-  height: 100%;
-  max-height: 100%;
+  height: calc(100% + #{$pull-height});
+  max-height: calc(100% + #{$pull-height});
   width: 100%;
   overflow-y: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // display: none;
+  animation: splash-close 0.7s forwards 3.8s;
+
+  @keyframes splash-close {
+    0% {
+      transform: translateY(0%);
+    }
+    60% {
+      transform: translateY($pull-height);
+    }
+    99% {
+      display: block;
+    }
+    100% {
+      display: none;
+      transform: translateY(-100%);
+    }
+  }
 
   div {
     display: flex;
@@ -21,25 +41,6 @@
     width: 100%;
     height: 100%;
     background-color: $bg-color2;
-
-    // display: none;
-    animation: splash-close 0.7s forwards 4.7s;
-
-    @keyframes splash-close {
-      0% {
-        transform: translateY(0%);
-      }
-      60% {
-        transform: translateY(10%);
-      }
-      99% {
-        display: block;
-      }
-      100% {
-        display: none;
-        transform: translateY(-100%);
-      }
-    }
   }
 
   .splash__overlay-text {
@@ -50,14 +51,15 @@
     margin-right: 4px;
     font-weight: 700;
     opacity: 0;
-    animation: initials-fly-in 0.7s forwards 3.5s;
+    animation: initials-fly-in 0.5s forwards 3s;
   }
 
   .splash__cover {
     fill: $bg-color2;
     transform: scale(1.003);
     transform-origin: center;
-    animation: cover-shrink 1.5s forwards 1.7s cubic-bezier(0.52, 1.44, 0.62,-0.35);
+    animation: cover-shrink 1s forwards 1.7s
+      cubic-bezier(0.52, 1.44, 0.62, -0.35);
   }
 
   .splash__blob {
@@ -84,7 +86,7 @@
   @keyframes initials-fly-in {
     0% {
       opacity: 0;
-      transform: scale(0);
+      transform: scale(0.9);
     }
 
     100% {
