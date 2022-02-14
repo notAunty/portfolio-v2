@@ -3,9 +3,121 @@
   top: 0;
   left: 0;
   height: 100%;
+  max-height: 100%;
   width: 100%;
+  overflow-y: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: green;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > .close {
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color2;
+
+    // display: none;
+    animation: splash-close 0.3s forwards 999s;
+
+    @keyframes splash-close {
+      0% {
+        transform: translateY(0%);
+      }
+      99% {
+        display: block;
+      }
+      100% {
+        display: none;
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  #blobSvg::before,
+  #blobSvg::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5em 0 0 0.5em;
+    position: absolute;
+    left: 0;
+    transform-origin: center right;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #blobSvg::before {
+    z-index: 1;
+    background-color: $bg-color2;
+    animation-name: mask;
+    animation-timing-function: steps(1);
+  }
+
+  #blobSvg::after {
+    background-color: var(--color);
+    animation-name: rotate;
+    animation-timing-function: linear;
+  }
+
+  @keyframes mask {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0.5turn);
+    }
+    100% {
+      transform: rotate(1.5turn);
+    }
+  }
+
+  .pie {
+    width: 128px;
+    aspect-ratio: 1;
+    font-size: 500%;
+    position: relative;
+    border-radius: 50%;
+    margin: 0.5em;
+    display: inline-block;
+    --color: white;
+
+    > * {
+      position: absolute;
+    }
+  }
+
+  .pie::before,
+  .pie::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 0.5em 0 0 0.5em;
+    transform-origin: center right;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+  }
+
+  .pie::before {
+    z-index: 1;
+    background-color: blue;
+    animation-name: mask;
+    animation-timing-function: steps(1);
+  }
+
+  .pie::after {
+    background-color: red;
+    animation-name: rotate;
+    animation-timing-function: linear;
+  }
 }
