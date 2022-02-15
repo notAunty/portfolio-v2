@@ -10,10 +10,11 @@ export default () => {
   const splashDoneTiming = !forceSplash && (prod || splashDisabled) ? 1100 : 3700;
 
   $("#portfolio-splash").css("animation-delay", `${splashDoneTiming}ms`);
+  // $("#portfolio-splash").css("display", `none`);
 
   setTimeout(() => {
     $("#site").css("display", "block");
-  }, splashDoneTiming);
+  }, splashDoneTiming + 500);
 
   localStorage.setItem("splash", "disabled");
 

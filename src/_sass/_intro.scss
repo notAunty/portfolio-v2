@@ -4,7 +4,7 @@
   flex-direction: column;
 
   &__hello {
-    margin-top: 18vh;
+    margin-top: 13vh;
     margin-bottom: 48px;
     @include font-size($body);
   }
@@ -23,7 +23,7 @@
     .spinner {
       line-height: 44px;
       $spinner-line-height: 44px;
-      height: #{$spinner-line-height - 6px};
+      height: #{$spinner-line-height - 4px};
       overflow-y: hidden;
       font-weight: 700;
       color: $primary-color;
@@ -31,7 +31,7 @@
       > span {
         display: block;
         white-space: nowrap;
-        animation: spin-words 10s infinite;
+        animation: spin-words 12s infinite 0.7s;
 
         @keyframes spin-words {
           0% {
@@ -40,16 +40,16 @@
           5% {
             transform: translateY(calc(#{$spinner-line-height} * 0));
           }
-          24% {
+          26% {
             transform: translateY(calc(#{$spinner-line-height} * -1));
           }
-          42% {
+          47% {
             transform: translateY(calc(#{$spinner-line-height} * -2));
           }
-          62% {
+          68% {
             transform: translateY(calc(#{$spinner-line-height} * -3));
           }
-          81% {
+          90% {
             transform: translateY(calc(#{$spinner-line-height} * -4));
           }
           100% {
