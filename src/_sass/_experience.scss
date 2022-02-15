@@ -1,0 +1,46 @@
+.experience {
+  .jobs {
+    margin-bottom: 100px;
+  }
+  .job {
+    margin-bottom: 32px;
+
+    // &:last-of-type {
+    //   margin-bottom: -64px;
+    //   @include tablet {
+    //     margin-bottom: -32px;
+    //   }
+    // }
+
+    .time-place {
+      display: flex;
+      justify-content: space-between;
+      @include small-desktop {
+        display: block;
+      }
+    }
+    &__company {
+      font-weight: 700;
+      max-width: 70%;
+      margin-right: 32px;
+    }
+    &__time {
+      // font-size: 0.9rem;
+      @include font-size($caption);
+      font-family: $monospace;
+      white-space: nowrap;
+    }
+    &__position {
+      font-weight: 400;
+    }
+  }
+  .arrow-link {
+    // font-size: 1.25rem;
+    @include font-size($h6);
+    &:after {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
