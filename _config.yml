@@ -4,7 +4,7 @@ title: Khan Soh | Full-stack Developer & Data Scientist
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://wksoh.com" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "img/emojis/technologist.png"
+logo: "img/favicon.png"
 email: "ksoh@tuta.io"
 cover: "https://wksoh.com/img/featured/og.jpg"
 

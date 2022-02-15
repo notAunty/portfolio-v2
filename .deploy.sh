@@ -4,7 +4,7 @@ cd public
 rm -rf *
 cd ..
 source ~/.profile
-webpack
+npm run build
 JEKYLL_ENV=production
 bundle exec jekyll build
 cp -r _site/. public

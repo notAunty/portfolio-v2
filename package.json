@@ -4,8 +4,8 @@
   "description": "The second iteration of my portfolio",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w --config webpack.config.js --env production",
-    "build": "webpack --config webpack.config.js",
+    "dev": "webpack -w --config webpack.config.js --env production=false",
+    "build": "webpack --config webpack.config.js --env production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Khan Soh <ksoh@tuta.io>",
