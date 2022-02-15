@@ -57,8 +57,33 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  color: $text-color2;
+
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $primary-color;
+    content: '';
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transform: translateY(-5px);
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      height: 2px;
+      border-radius: 3px;
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+  }
 }
 
 * {

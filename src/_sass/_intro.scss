@@ -1,5 +1,5 @@
 .portfolio__intro {
-  height: calc(100% - #{$nav-bar-height});
+  height: calc(100vh - #{$nav-bar-height});
   display: flex;
   flex-direction: column;
 
