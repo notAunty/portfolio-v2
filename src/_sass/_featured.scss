@@ -45,6 +45,10 @@
       margin-bottom: 2px;
       font-weight: 700;
       @include font-size($h5);
+
+      .arrow-link {
+        white-space: normal;
+      }
     }
     p {
       // font-size: 0.85rem;
