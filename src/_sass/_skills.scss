@@ -1,0 +1,39 @@
+.skills {
+  .skillz {
+    width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    
+    display: grid;
+    row-gap: 16px;
+    column-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include small-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__category {
+      // width: 20%;
+      // margin-right: 16px;
+      // @include small-desktop {
+      //   width: 47%;
+      //   margin-bottom: 25px;
+      // }
+      > ul {
+        padding: 8px 24px;
+      }
+      &__label {
+        font-weight: 700;
+        color: $black;
+        text-transform: uppercase;
+      }
+      &__item {
+        margin: 4px 0;
+        @include font-size($body);
+        // font-size: 0.9rem;
+      }
+    }
+  }
+}
