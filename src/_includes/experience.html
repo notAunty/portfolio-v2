@@ -7,7 +7,7 @@
         <div class="time-place">
           <div class="job__company">
             {% if job.url %}
-              <a href="{{job.url}}" target="_blank">{{job.company}}</a>
+              <a href="{{job.url}}" target="_blank" class="underline-link">{{job.company}}</a>
             {% else %}
               <span>{{job.company}}</span>
             {% endif %}

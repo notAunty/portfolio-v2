@@ -1,0 +1,55 @@
+.featured-projects {
+  a:not([class]):after { // Select <a> tag without any class
+    display: none;
+  }
+
+  // Select <a> tag with class=""
+  // a[class=""] { /* selects only Section C */
+  //   font-weight: bold;
+  // }
+
+  .project {
+    // display: flex;
+    margin-bottom: 90px;
+    width: 100%;
+    @include tablet {
+      margin-bottom: 70px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &__pic {
+      width: 100%;
+      max-width: 700px;
+      overflow: visible;
+      margin: 0;
+      a {
+        display: block;
+      }
+      img {
+        width: 100%;
+        border-radius: 12px;
+        vertical-align: bottom;
+      }
+    }
+    &__caption {
+      width: 100%;
+      flex-shrink: 0;
+      margin-left: 0;
+      margin-top: 15px;
+      @include tablet {
+        margin-left: 0;
+      }
+    }
+    &__name {
+      margin-bottom: 2px;
+      font-weight: 700;
+      @include font-size($h5);
+    }
+    p {
+      // font-size: 0.85rem;
+      @include font-size($body);
+      line-height: 1.3;
+    }
+  }
+}

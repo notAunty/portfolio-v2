@@ -56,7 +56,7 @@ body {
   font-family: $sans;
 }
 
-a {
+.underline-link {
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -88,4 +88,36 @@ a {
 
 * {
   transition: background-color 0.2 ease-out;
+}
+
+.arrow-link {
+  @include transition;
+  font-weight: 700;
+  display: inline-block;
+  background-color: transparent;
+  white-space: nowrap;
+
+  color: $text-color2;
+  text-decoration: none;
+
+  &:after {
+    @include transition;
+    position: relative;
+    bottom: 2px;
+    margin-left: 15px;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    content: '→';
+    color: $primary-color;
+    font-weight: 700;
+    vertical-align: text-top;
+    // background: url('../img/arrow.png') no-repeat center;
+    // filter: invert(42%) sepia(93%) saturate(135%) hue-rotate(87deg) brightness(100%) contrast(119%);
+
+  }
+  &:hover:after {
+    transform: translateX(7px);
+  }
 }
