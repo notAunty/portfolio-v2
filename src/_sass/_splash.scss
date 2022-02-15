@@ -14,7 +14,7 @@
   justify-content: center;
 
   // display: none;
-  animation: splash-close 0.7s forwards 3.5s;
+  animation: splash-close 0.7s forwards;
 
   @keyframes splash-close {
     0% {
@@ -52,14 +52,14 @@
     margin-right: 4px;
     font-weight: 700;
     opacity: 0;
-    animation: initials-fly-in 0.5s forwards 3.5s;
+    animation: initials-fly-in 0.5s forwards 3s;
   }
 
   .splash__cover {
     fill: $bg-color2;
     transform: scale(1.003);
     transform-origin: center;
-    animation: cover-shrink 1s forwards 2s
+    animation: cover-shrink 1s forwards 1.7s
       cubic-bezier(0.52, 1.44, 0.62, -0.35);
   }
 
