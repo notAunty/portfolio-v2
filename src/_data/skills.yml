@@ -1,35 +1,42 @@
 languages:
-  - item: Dart
-  - item: Python
-  - item: JavaScript
-  - item: HTML
   - item: CSS/Sass
-  - item: Java
+  - item: JavaScript
+  - item: Dart
   - item: SQL
+  - item: Python
+  - item: Java
+  - item: HTML
+  - item: C#
 
 frameworks:
-  - item: Flutter
+  - item: React.js
+  - item: Svelte
   - item: Node.js
-  - item: React
-  - item: Wordpress
-  - item: PyTorch
-  - item: Tensorflow
+  - item: Express.js
+  - item: Flutter
+  - item: Mocha.js
+  - item: Pandas
   - item: Scikit-learn
+  - item: Unity
+  - item: Jekyll
 
 tools:
-  - item: PostgreSQL
-  - item: Git & Github
-  - item: Jupyter Notebook
-  - item: npm
-  - item: Bash
-  - item: Postman
-  - item: Redshift
-  - item: Firebase
-  - item: Google Cloud
-
-other:
+  - item: Git
   - item: Vim
   - item: Linux
+  - item: PostgreSQL
+  - item: Amazon Redshift
+  - item: npm / yarn
+  - item: Postman
+  - item: Jupyter Notebook
+
+other:
+  - item: Heroku
+  - item: Netlify
+  - item: Firebase
+  - item: Amazon S3
+  - item: Google Cloud
+  - item: Amazon AWS
   - item: Figma
-  - item: Jekyll
   - item: Premiere Pro
+  - item: ZFS
