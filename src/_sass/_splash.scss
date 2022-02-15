@@ -1,6 +1,6 @@
 #portfolio-splash {
   z-index: 20;
-  $pull-height: 56px;
+  $pull-height: 0px;
   position: absolute;
   top: #{-$pull-height};
   left: 0;
@@ -14,7 +14,7 @@
   justify-content: center;
 
   // display: none;
-  animation: splash-close 0.7s forwards 3.8s;
+  animation: splash-close 0.7s forwards 3.5s;
 
   @keyframes splash-close {
     0% {
@@ -52,14 +52,14 @@
     margin-right: 4px;
     font-weight: 700;
     opacity: 0;
-    animation: initials-fly-in 0.5s forwards 3s;
+    animation: initials-fly-in 0.5s forwards 3.5s;
   }
 
   .splash__cover {
     fill: $bg-color2;
     transform: scale(1.003);
     transform-origin: center;
-    animation: cover-shrink 1s forwards 1.7s
+    animation: cover-shrink 1s forwards 2s
       cubic-bezier(0.52, 1.44, 0.62, -0.35);
   }
 

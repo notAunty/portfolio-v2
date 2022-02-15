@@ -1,7 +1,21 @@
 export default () => {
+  const forceSplash = false;
+
+  const splashScreen = localStorage.getItem("splash")
+    ? localStorage.getItem("splash")
+    : "enabled";
+
+  const prod = process.env.production === "true";
+  const splashDisabled = splashScreen === "disabled";
+  const splashDoneTiming = !forceSplash && (prod || splashDisabled) ? 1100 : 3700;
+
+  $("#portfolio-splash").css("animation-delay", `${splashDoneTiming}ms`);
+
   setTimeout(() => {
     $("#site").css("display", "block");
-  }, 4400);
+  }, splashDoneTiming);
+
+  localStorage.setItem("splash", "disabled");
 
   // console.log($(".blob")[0].getTotalLength());
 };
