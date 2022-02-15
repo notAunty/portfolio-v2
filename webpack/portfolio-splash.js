@@ -3,7 +3,7 @@ export default () => {
 
   const splashScreen = localStorage.getItem("splash")
     ? localStorage.getItem("splash")
-    : "enabled";
+    : "disabled";
 
   const prod = process.env.production === "true";
   const splashDisabled = splashScreen === "disabled";
