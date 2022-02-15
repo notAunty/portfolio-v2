@@ -1,6 +1,6 @@
-name: K Soh
-short_title: K Soh | SE & DS
-title: K Soh | Full-stack Developer & Data Scientist
+name: Khan Soh
+short_title: Khan Soh | SE & DS
+title: Khan Soh | Full-stack Developer & Data Scientist
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://wksoh.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -14,10 +14,13 @@ description: >- # this means to ignore newlines until "email:". Write an awesome
 keywords: "ksoh, web, web development, ai, datascience, javascript, singapore, malaysia, flutter, apps, mobile apps"
 social:
   - title: email
+    feather_icons: mail
     url: mailto:ksoh@tuta.io
   - title: github
+    feather_icons: github
     url: https://github.com/notaunty
   - title: linkedin
+    feather_icons: linkedin
     url: https://www.linkedin.com
 
 source: src
