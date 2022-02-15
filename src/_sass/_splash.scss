@@ -44,6 +44,10 @@
     background-color: $bg-color2;
   }
 
+  .splash__inner {
+    width: 300px;
+  }
+
   .splash__overlay-text {
     position: absolute;
     font-family: "Acme", system-ui, sans-serif;
