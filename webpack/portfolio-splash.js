@@ -11,7 +11,7 @@ export default () => {
   const splashDisabled = splashScreen === "disabled";
   const splashDoneTiming = forceSplash
     ? 3000
-    : prod || splashDisabled
+    : !prod || splashDisabled
     ? 1100
     : 3000;
   

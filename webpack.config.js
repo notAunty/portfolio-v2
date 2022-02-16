@@ -11,7 +11,7 @@ const webpack = require('webpack');
 const { config } = require('dotenv');
 
 module.exports = (env) => ({
-  mode: "development", // production, development
+  mode: "production", // production, development
   entry: "./webpack/main.js", // webpack folder's entry js - excluded from jekll's build process.
   output: {
     // we're going to put the generated file in the assets folder so jekyll will grab it.
