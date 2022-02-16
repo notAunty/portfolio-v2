@@ -3,7 +3,7 @@ export default () => {
 
   const splashScreen = sessionStorage.getItem("splash")
     ? sessionStorage.getItem("splash")
-    : "disabled";
+    : "enabled";
 
   const prod = process.env.production === "true";
   const splashDisabled = splashScreen === "disabled";
@@ -12,7 +12,7 @@ export default () => {
     : prod || splashDisabled
     ? 1100
     : 3000;
-
+  
   $("#portfolio-splash").css("animation-delay", `${splashDoneTiming}ms`);
   // $("#portfolio-splash").css("display", `none`);
 
