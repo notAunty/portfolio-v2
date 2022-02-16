@@ -21,7 +21,7 @@ social:
     url: https://github.com/notaunty
   - title: linkedin
     feather_icons: linkedin
-    url: https://www.linkedin.com
+    url: https://www.linkedin.com/in/khan-s-72a3911a4
 
 source: src
 destination: ./_site
