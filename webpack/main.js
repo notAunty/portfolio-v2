@@ -1,15 +1,17 @@
 import darkTheme from "./dark-theme";
+import navigation from "./navigation";
 import portfolioSplash from "./portfolio-splash";
 
 // Alternative to: document.addEventListener("DOMContentLoaded", function(event) {});
 $("document").ready(main);
 
 function main() {
-  const domain = "https://wksoh.com/"
-  const currentUrl = window.location.href;
+  // const domain = "https://wksoh.com/"
+  // const currentUrl = window.location.href;
   
   // darkTheme();
   portfolioSplash();
+  navigation();
 
   // HANDLE BROKEN IMAGES
   document.querySelectorAll("img").forEach(function (img) {
