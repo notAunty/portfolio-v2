@@ -1,6 +1,5 @@
 import darkTheme from "./dark-theme";
 import portfolioSplash from "./portfolio-splash";
-import scrollReveal from "./scroll-reveal";
 
 // Alternative to: document.addEventListener("DOMContentLoaded", function(event) {});
 $("document").ready(main);
@@ -11,7 +10,6 @@ function main() {
   
   // darkTheme();
   portfolioSplash();
-  scrollReveal();
 
   // HANDLE BROKEN IMAGES
   document.querySelectorAll("img").forEach(function (img) {
@@ -21,18 +19,18 @@ function main() {
   });
 
   // SCROLL DOWN HINT ARROW
-  const arrows = document.querySelector(".arrows");
-  setTimeout(function () {
-    if (window.scrollY < 300) {
-      arrows.style.display = "block";
-    } else {
-      console.log("Scroll down arrow hint skipped.");
-    }
-  }, 3000);
+  // const arrows = document.querySelector(".arrows");
+  // setTimeout(function () {
+  //   if (window.scrollY < 300) {
+  //     arrows.style.display = "block";
+  //   } else {
+  //     console.log("Scroll down arrow hint skipped.");
+  //   }
+  // }, 3000);
 
 
-  if (!(
-    currentUrl === domain || 
-    currentUrl === "http://localhost:4000/"
-  )) return;
+  // if (!(
+  //   currentUrl === domain || 
+  //   currentUrl === "http://localhost:4000/"
+  // )) return;
 }

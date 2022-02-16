@@ -1,3 +1,5 @@
+import scrollReveal from "./scroll-reveal";
+
 export default () => {
   const forceSplash = false;
 
@@ -18,6 +20,7 @@ export default () => {
 
   setTimeout(() => {
     $("#site").css("display", "block");
+    scrollReveal();
   }, splashDoneTiming + 500);
 
   sessionStorage.setItem("splash", "disabled");
