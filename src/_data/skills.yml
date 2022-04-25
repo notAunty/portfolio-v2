@@ -1,6 +1,7 @@
 languages:
-  - item: CSS/Sass
+  - item: CSS / Sass
   - item: JavaScript
+  - item: TypeScript
   - item: Dart
   - item: SQL
   - item: Python
@@ -10,10 +11,13 @@ languages:
 
 frameworks:
   - item: React.js
+  - item: Vue.js
   - item: Svelte
   - item: Node.js
+  - item: Vuex
   - item: Express.js
   - item: Flutter
+  - item: Nest.js
   - item: Mocha.js
   - item: Pandas
   - item: Scikit-learn
